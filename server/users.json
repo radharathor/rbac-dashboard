@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "679396095e1e489f4f562939",
+    "name": "admin ",
+    "email": "admin@example.com",
+    "password": "admmin@123",
+    "role": "Viewer",
+    "status": "Active",
+    "__v": 0
+  },
+  {
+    "_id": "679397560e8dfc120619d78d",
+    "name": "Radha Rathore",
+    "email": "radha211134cst@sdbc.ac.in",
+    "password": "defaultpassword",
+    "role": "Editor",
+    "status": "Inactive",
+    "__v": 0
+  }
+]

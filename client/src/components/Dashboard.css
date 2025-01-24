@@ -1,0 +1,207 @@
+/* General Dashboard Styling */
+.dashboard {
+  padding: 20px;
+  font-family: 'Poppins', sans-serif; /* Modern font for clean look */
+  background: linear-gradient(135deg, #e3f2fd, #ffffff); /* Subtle gradient background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+/* Dashboard Title */
+.dashboard h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #007bff; /* Vibrant blue for the title */
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 70px;
+  max-width: 800p;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+/* User Form Styling */
+.user-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamic column layout */
+  gap: 20px;
+  width: 90%;
+  max-width: 800px;
+  margin-bottom: 40px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Soft shadow */
+}
+
+.user-form input,
+.user-form select {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  background: #f9f9f9;
+  transition: box-shadow 0.3s, border-color 0.3s ease;
+}
+
+.user-form input:focus,
+.user-form select:focus {
+  border-color: #007bff;
+  box-shadow: 0px 4px 12px rgba(0, 123, 255, 0.2); /* Highlight on focus */
+  outline: none;
+}
+
+/* Submit Button */
+.user-form button {
+  grid-column: span 2; /* Full-width button for larger screens */
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s ease;
+}
+
+.user-form button:hover {
+  background: linear-gradient(135deg, #0056b3, #003f8a);
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Scrollable Table Container */
+.table-container {
+  width: 90%;
+  max-width: 800px;
+  border-radius: 12px;
+  overflow-x: auto; /* Enable horizontal scroll for small screens */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  background: white;
+}
+
+/* Table Styling */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+/* Sticky Header */
+.user-table thead th {
+  position: sticky;
+  top: 0;
+  background: #007bff; /* Vibrant blue header */
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+
+
+.user-table tbody tr:nth-child(odd) {
+  background-color: #f8f9fa; /* Light gray for alternate rows */
+}
+
+.user-table tbody tr:hover {
+  background-color: #e3f2fd; /* Highlight row on hover */
+}
+
+.user-table td {
+  padding: 15px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Action Buttons */
+.user-table button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.user-table button:first-child {
+  background-color: #ffc107; /* Yellow for Edit */
+  color: #343a40;
+}
+
+.user-table button:first-child:hover {
+  background-color: #e0a800; /* Darker yellow */
+  transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+.user-table button:last-child {
+  background-color: #dc3545; /* Red for Delete */
+  color: white;
+}
+
+.user-table button:last-child:hover {
+  background-color: #c82333; /* Darker red */
+  transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .user-form {
+    grid-template-columns: 1fr 1fr; /* Two-column form for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .user-form {
+    grid-template-columns: 1fr; /* Single-column form for small screens */
+    gap: 15px;
+  }
+
+  .table-container {
+    overflow-x: auto; /* Horizontal scroll for small screens */
+  }
+
+  .user-table {
+    font-size: 14px; /* Slightly smaller font for compact view */
+  }
+
+  .user-form button {
+    font-size: 14px; /* Smaller button text */
+    padding: 12px;
+  }
+
+  /* Adjust the action buttons to fill the column width on smaller screens */
+  .user-table button {
+    width: 100%; /* Full width for action buttons on small screens */
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard h2 {
+    font-size: 24px; /* Smaller title on mobile */
+  }
+
+  .user-table td {
+    font-size: 12px; /* Compact table data */
+    padding: 10px; /* Less padding */
+  }
+ 
+
+  .user-form button {
+    padding: 10px; /* Smaller button padding */
+  }
+
+  /* Adjust action buttons for mobile */
+  .user-table button {
+    font-size: 12px;
+    width: 100%; /* Full width buttons on mobile */
+    padding: 10px;
+  
+  }
+}

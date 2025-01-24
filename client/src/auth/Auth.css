@@ -1,0 +1,68 @@
+/* Auth Container Styles */
+.auth-container {
+  max-width: 400px;
+  margin: 100px auto; /* Adds space below the header */
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Style */
+.auth-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #2c3e50;
+}
+
+/* Form Styles */
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input Fields Styles */
+.auth-container input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* Input Focus Styles */
+.auth-container input:focus {
+  border-color: #3498db;
+}
+
+/* Button Styles */
+.auth-container button {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover Styles */
+.auth-container button:hover {
+  background-color: #2980b9;
+}
+
+/* Button Active Styles */
+.auth-container button:active {
+  background-color: #1f6391;
+}
+
+/* Error message styles */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+}
